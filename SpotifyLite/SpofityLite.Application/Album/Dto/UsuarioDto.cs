@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SpofityLite.Application.Album.Dto
 {
-    public record UsuarioInputDto(
+    public record UsuarioInputDto(Guid? Id,
         [Required(ErrorMessage = "O nome é requerido!")] string Nome,
         [Required(ErrorMessage = "O Email é requerido!")] string Email,
         [Required(ErrorMessage = "A Senha é requerida!")] string Password);
