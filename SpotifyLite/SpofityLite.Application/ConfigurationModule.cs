@@ -41,7 +41,7 @@ namespace SpofityLite.Application
 
             var info = new OpenApiInfo();
             info.Version = "V1";
-            info.Title = "API Projeto PedidosWeb";
+            info.Title = "API Projeto Spotify";
 
             services.AddSwaggerGen(c =>
             {
