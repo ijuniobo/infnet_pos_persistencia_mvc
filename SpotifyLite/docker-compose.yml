@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  spotifylite.api:
+    image: ${DOCKER_REGISTRY-}spotifyliteapi
+    build:
+      context: .
+      dockerfile: SpotifyLite.Api\Dockerfile
