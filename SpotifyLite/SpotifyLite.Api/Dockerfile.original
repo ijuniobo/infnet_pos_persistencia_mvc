@@ -10,11 +10,11 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["SpotifyLite.Api.csproj", "SpotifyLite.Api/"]
-COPY ["/identity/infnet_pos_persistencia_mvc/spotifylite/SpofityLite.Application/SpofityLite.Application.csproj", "SpofityLite.Application/"]
-COPY ["/identity/infnet_pos_persistencia_mvc/spotifylite/SpotifyLite.Domain/SpotifyLite.Domain.csproj", "SpotifyLite.Domain/"]
-COPY ["/identity/infnet_pos_persistencia_mvc/spotifylite/SpotifyLite.CrossCutting/SpotifyLite.CrossCutting.csproj", "SpotifyLite.CrossCutting/"]
-COPY ["/identity/infnet_pos_persistencia_mvc/spotifylite/spotifylite/SpotifyLite.Repository/SpotifyLite.Repository.csproj", "SpotifyLite.Repository/"]
+COPY ["SpotifyLite.Api/SpotifyLite.Api.csproj", "SpotifyLite.Api/"]
+COPY ["SpofityLite.Application/SpofityLite.Application.csproj", "SpofityLite.Application/"]
+COPY ["SpotifyLite.Domain/SpotifyLite.Domain.csproj", "SpotifyLite.Domain/"]
+COPY ["SpotifyLite.CrossCutting/SpotifyLite.CrossCutting.csproj", "SpotifyLite.CrossCutting/"]
+COPY ["SpotifyLite.Repository/SpotifyLite.Repository.csproj", "SpotifyLite.Repository/"]
 RUN dotnet restore "SpotifyLite.Api/SpotifyLite.Api.csproj"
 COPY . .
 WORKDIR "/src/SpotifyLite.Api"
